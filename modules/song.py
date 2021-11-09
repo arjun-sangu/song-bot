@@ -34,7 +34,7 @@ def a(client, message):
         # results = YoutubeSearch(query, max_results=1).to_dict()
         try:
             link = f"https://youtube.com{results[0]['url_suffix']}"
-            # print(results)
+             print(results)
             title = results[0]["title"]
             thumbnail = results[0]["thumbnails"][0]
             duration = results[0]["duration"]
@@ -60,7 +60,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("**⏳Uploading Best quality song...**")
+    m.edit("**⏳ Sending a Best quality song...**")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
