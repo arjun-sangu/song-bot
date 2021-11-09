@@ -58,7 +58,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Nothing found Retry with another !**')
+            m.edit('**😵Oops nothing found..\n Retry with another !**')
             return
     except Exception as e:
         m.edit(
