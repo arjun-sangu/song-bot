@@ -34,7 +34,7 @@ def a(client, message):
         # results = YoutubeSearch(query, max_results=1).to_dict()
         try:
             link = f"https://youtube.com{results[0]['url_suffix']}"
-             print(results)
+            print(results)
             title = results[0]["title"]
             thumbnail = results[0]["thumbnails"][0]
             duration = results[0]["duration"]
@@ -66,7 +66,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>𝚃𝙸𝚃𝙻𝙴 :</b> <a href="{link}">{title}</a>\n\n⌚ <b>𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 :</b> <code>{duration}</code>\n📻 <b>𝚄𝙿𝙻𝙾𝙰𝙳𝙴𝙳 :</b> <a href="https://t.me/MissHana_Msbot">ＨΛＮΛ</a>'
+        rep = f'🎶 <b>𝚃𝙸𝚃𝙻𝙴 :</b> <a href="{link}">{title}</a>\n\n⏱️ <b>𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 :</b> <code>{duration}</code>\n📻 <b>𝚄𝙿𝙻𝙾𝙰𝙳𝙴𝙳 :</b> <a href="https://t.me/MissHana_Msbot">ＨΛＮΛ</a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
